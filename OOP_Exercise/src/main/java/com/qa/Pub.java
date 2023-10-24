@@ -1,19 +1,26 @@
 package com.qa;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Pub {
     private String location;
     private int openTime;
     private int closeTime;
     private double rating;
-    private String[] drinks;
+    private ArrayList<String> drinkList = new ArrayList<>();
+//    private String[] drinks = {"carling", "madri", "guinness", "g&t", "asahi", "1664", "carlsberg"};
 
-    public Pub(String location, int openTime, int closeTime, double rating, String[] drink){
+    public Pub(String location, int openTime, int closeTime, double rating) {
         this.location = location;
         this.openTime = openTime;
         this.closeTime = closeTime;
         this.rating = rating;
-        this.drinks = drinks;
+        List<String> tempList = Arrays.asList("carling", "madri", "guinness", "g&t", "asahi", "1664", "carlsberg");
+        this.drinkList.addAll(tempList);
     }
+
     public double getRating() {
         return rating;
     }
@@ -31,7 +38,7 @@ public class Pub {
     public void setCloseTime(int closeTime) {
         int closeHour = closeTime / 100;
         int closeMinute = closeTime % 100;
-        if (closeHour <= 24 && closeMinute <= 60 && closeHour >=0 && closeMinute >=0) {
+        if (closeHour <= 24 && closeMinute <= 60 && closeHour >= 0 && closeMinute >= 0) {
             this.closeTime = closeTime;
         }
     }
@@ -43,7 +50,7 @@ public class Pub {
     public void setOpenTime(int openTime) {
         int openHour = openTime / 100;
         int openMinute = openTime % 100;
-        if (openHour <= 24 && openMinute <= 60 && openHour >=0 && openMinute >=0) {
+        if (openHour <= 24 && openMinute <= 60 && openHour >= 0 && openMinute >= 0) {
             this.openTime = openTime;
         }
     }
@@ -54,5 +61,15 @@ public class Pub {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public void addDrink(String drink) {
+        drink = drink.toLowerCase();
+        if (!this.drinkList.contains(drink)) {
+            this.drinkList.add(drink);
+        }
+    }
+    public ArrayList<String> getDrinkList() {
+        return this.drinkList;
     }
 }
