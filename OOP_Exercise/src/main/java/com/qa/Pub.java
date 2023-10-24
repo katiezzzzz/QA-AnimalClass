@@ -5,14 +5,14 @@ public class Pub {
     private int openTime;
     private int closeTime;
     private double rating;
-    private Drink drink;
+    private String[] drinks;
 
-    public Pub(String location, int openTime, int closeTime, double rating, Drink drink){
+    public Pub(String location, int openTime, int closeTime, double rating, String[] drink){
         this.location = location;
         this.openTime = openTime;
         this.closeTime = closeTime;
         this.rating = rating;
-        this.drink = drink;
+        this.drinks = drinks;
     }
     public double getRating() {
         return rating;
