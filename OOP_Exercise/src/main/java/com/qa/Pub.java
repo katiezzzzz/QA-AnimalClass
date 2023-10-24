@@ -29,7 +29,11 @@ public class Pub {
     }
 
     public void setCloseTime(int closeTime) {
-        this.closeTime = closeTime;
+        int closeHour = closeTime / 100;
+        int closeMinute = closeTime % 100;
+        if (closeHour <= 24 && closeMinute <= 60 && closeHour >=0 && closeMinute >=0) {
+            this.closeTime = closeTime;
+        }
     }
 
     public int getOpenTime() {
@@ -37,7 +41,11 @@ public class Pub {
     }
 
     public void setOpenTime(int openTime) {
-        this.openTime = openTime;
+        int openHour = openTime / 100;
+        int openMinute = openTime % 100;
+        if (openHour <= 24 && openMinute <= 60 && openHour >=0 && openMinute >=0) {
+            this.openTime = openTime;
+        }
     }
 
     public String getLocation() {
