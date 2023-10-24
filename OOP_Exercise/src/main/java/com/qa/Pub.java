@@ -43,7 +43,7 @@ public class Pub {
     public void setCloseTime(int closeTime) {
         int closeHour = closeTime / 100;
         int closeMinute = closeTime % 100;
-        if (closeHour <= 24 && closeMinute <= 60 && closeHour >= 0 && closeMinute >= 0) {
+        if (closeHour <= 24 && closeMinute < 60 && closeHour >= 0 && closeMinute >= 0) {
             this.closeTime = closeTime;
         }
     }
@@ -55,7 +55,7 @@ public class Pub {
     public void setOpenTime(int openTime) {
         int openHour = openTime / 100;
         int openMinute = openTime % 100;
-        if (openHour <= 24 && openMinute <= 60 && openHour >= 0 && openMinute >= 0) {
+        if (openHour <= 24 && openMinute < 60 && openHour >= 0 && openMinute >= 0) {
             this.openTime = openTime;
         }
     }

@@ -15,7 +15,7 @@ public class App
 //        ant.setAge(1);
 //        System.out.println(ant);
         Pub pub1 = new Pub("Manchester");
-        pub1.setCloseTime(2200);
+        pub1.setCloseTime(2260);
         System.out.println(pub1.getCloseTime());
 
         pub1.addDrink("vodka");
