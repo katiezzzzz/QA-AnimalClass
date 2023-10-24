@@ -86,7 +86,7 @@ public class Pub {
 
     @Override
     public String toString() {
-        return String.format("The %s pub opens at %04d and closes at %04d and a rating of %.2f",
+        return String.format("The %s pub opens at %04d and closes at %04d and has a rating of %.2f",
                 this.getLocation(), this.getOpenTime(), this.getCloseTime(), this.getRating());
     }
 }

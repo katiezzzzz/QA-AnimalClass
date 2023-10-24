@@ -15,12 +15,13 @@ public class App
 //        ant.setAge(1);
 //        System.out.println(ant);
         Pub pub1 = new Pub("Manchester");
-        pub1.setCloseTime(2270);
+        pub1.setCloseTime(2200);
         System.out.println(pub1.getCloseTime());
 
         pub1.addDrink("vodka");
         System.out.println(pub1.getDrinkList());
         pub1.removeDrink("madri");
         System.out.println(pub1.getDrinkList());
+        System.out.println(pub1);
     }
 }
