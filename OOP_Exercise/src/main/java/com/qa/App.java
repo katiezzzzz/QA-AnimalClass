@@ -18,9 +18,9 @@ public class App
         pub1.setCloseTime(2270);
         System.out.println(pub1.getCloseTime());
 
-        pub1.addDrink("Carling");
-        pub1.addDrink("Madri");
+        pub1.addDrink("vodka");
         System.out.println(pub1.getDrinkList());
-        System.out.println(pub1);
+        pub1.removeDrink("madri");
+        System.out.println(pub1.getDrinkList());
     }
 }

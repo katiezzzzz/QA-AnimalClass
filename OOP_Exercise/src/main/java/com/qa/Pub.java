@@ -74,6 +74,12 @@ public class Pub {
             this.drinkList.add(drink);
         }
     }
+
+    public void removeDrink(String drink) {
+        drink = drink.toLowerCase();
+        this.drinkList.remove(drink);
+    }
+
     public ArrayList<String> getDrinkList() {
         return this.drinkList;
     }
