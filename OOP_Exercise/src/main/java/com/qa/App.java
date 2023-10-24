@@ -14,12 +14,13 @@ public class App
 //        Animal ant = new Animal();
 //        ant.setAge(1);
 //        System.out.println(ant);
-        Pub pub1 = new Pub("Manchester", 700, 2330, 3.56);
+        Pub pub1 = new Pub("Manchester");
         pub1.setCloseTime(2270);
         System.out.println(pub1.getCloseTime());
 
         pub1.addDrink("Carling");
         pub1.addDrink("Madri");
         System.out.println(pub1.getDrinkList());
+        System.out.println(pub1);
     }
 }

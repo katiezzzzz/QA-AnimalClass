@@ -5,12 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Pub {
-    private String location;
-    private int openTime;
-    private int closeTime;
-    private double rating;
-    private ArrayList<String> drinkList = new ArrayList<>();
-//    private String[] drinks = {"carling", "madri", "guinness", "g&t", "asahi", "1664", "carlsberg"};
+
+    public Pub(String location) {
+        this(location, 900, 2330, 4.50);
+    }
 
     public Pub(String location, int openTime, int closeTime, double rating) {
         this.location = location;
@@ -20,6 +18,13 @@ public class Pub {
         List<String> tempList = Arrays.asList("carling", "madri", "guinness", "g&t", "asahi", "1664", "carlsberg");
         this.drinkList.addAll(tempList);
     }
+
+    private String location;
+    private int openTime;
+    private int closeTime;
+    private double rating;
+    private ArrayList<String> drinkList = new ArrayList<>();
+//    private String[] drinks = {"carling", "madri", "guinness", "g&t", "asahi", "1664", "carlsberg"};
 
     public double getRating() {
         return rating;
@@ -71,5 +76,11 @@ public class Pub {
     }
     public ArrayList<String> getDrinkList() {
         return this.drinkList;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("The %s pub opens at %04d and closes at %04d and a rating of %.2f",
+                this.getLocation(), this.getOpenTime(), this.getCloseTime(), this.getRating());
     }
 }
